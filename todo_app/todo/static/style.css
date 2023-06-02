@@ -1,0 +1,54 @@
+.heading {
+    text-align: center;
+}
+
+.hrelement {
+    border: solid red 1px;
+}
+
+.formstyle {
+    margin-top: 2%;
+    border: solid blue 1px;
+    padding: 10%;
+    text-align: center;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inputfields {
+    margin-bottom: 2%;
+}
+
+input[type=text] {
+    width: 300px;
+    height: auto;
+}
+
+input[type=submit] {
+    width: 150px;
+    color: blue;
+    cursor: pointer;
+}
+
+.table_todo {
+    margin: 2% auto 0 auto;
+    border: solid green 1px;
+    padding: 10%;
+    width: 75%;
+}
+.table_todo table {
+    margin: 0 auto 0 auto;
+    border: solid black 1px;
+}
+
+.table_todo th, td {
+    border: solid black 1px;
+    width: auto;
+    padding: 10px;
+}
+.button {
+    padding: 5px;
+    text-decoration: none;
+    border: solid red 1px;
+}

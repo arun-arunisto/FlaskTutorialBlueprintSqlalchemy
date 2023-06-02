@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App using Flask Blueprint</title>
+    <link rel="stylesheet" href="{{url_for('todo_bp.static', filename='style.css')}}">
+</head>
+<body>
+<div class="heading">
+    <h2>Todo App using Blueprint and SqlAlchemy</h2>
+</div>
+<div class="hrelement">
+    <hr>
+</div>
+<div class="table_todo" {{hid}}>
+    <table>
+        <tr>
+            <th>Todo Description</th>
+            <th>Date & Time</th>
+            <th>Delete</th>
+        </tr>
+        {% for t in todos|sort(attribute='date', reverse=True) %}
+        <tr>
+            <td>{{t.todo_desc}}</td>
+            <td>{{t.date}}</td>
+            <td><a href="/delete/{{t.id}}" type="submit" class="button">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div class="formstyle">
+    <form action="/todo_add" method="post">
+        <div class="inputfields">
+            <input type="text" name="todo_desc" placeholder="typehere....">
+        </div>
+        <div class="inputfields">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+</body>
+</html>
