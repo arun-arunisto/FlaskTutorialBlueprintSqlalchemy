@@ -9,7 +9,7 @@ todo_bp = Blueprint("todo_bp", __name__,
 
 
 
-@todo_bp.route("/")
+@todo_bp.route("/todo")
 def index():
     todos = db.session.execute(db.select(Todo_Model)).scalars()
     return render_template("index.html", todos=todos)
